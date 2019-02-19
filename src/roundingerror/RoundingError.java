@@ -34,7 +34,7 @@ public class RoundingError {
 }
 /*
  Since Java square roots the number prior to squaring the number, and Java 
- rounds this value, there is a margin for error. For instance the square root of
+ rounds this value, there is a margin for error. For instance, the square root of
  2 is roughly equal to 1.4. But, 1.4^2 != 2. Although, the rounding error is very
  small, which can be considered negligible.
  */
