@@ -14,7 +14,7 @@ import javax.swing.*;
 public class RoundingError {
 
     /**
-     * @param args the command line arguments
+     * @param args
      */
     public static void main(String[] args) {
         //Asks user for a number
@@ -23,12 +23,18 @@ public class RoundingError {
         double inputNum = Double.parseDouble(numStr);
         
         //calculations
-        double squareRoot = Math.sqrt(inputNum);
-        double roundingError = (squareRoot)*(squareRoot);
-        double roundOffError = (roundingError) - (inputNum);
+        double squareRoot = Math.sqrt(inputNum); // Square roots the input
+        double roundingError = (squareRoot)*(squareRoot); //Squares the square root
+        double roundOffError = (roundingError) - (inputNum); // returns the value of the rouding error 
         
         //Displays the result
         JOptionPane.showMessageDialog(null,"The square of the square = " + roundingError + "\n"+ " The round off error = " + roundOffError);     
     }
     
 }
+/*
+ Since Java square roots the number prior to squaring the number, and Java 
+ rounds this value, there is a margin for error. For instance the square root of
+ 2 is roughly equal to 1.4. But, 1.4^2 != 2. Although, the rounding error is very
+ small, which can be considered negligible.
+ */
